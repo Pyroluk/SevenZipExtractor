@@ -190,7 +190,7 @@ namespace SevenZipExtractor
                     return this.entries;
                 }
 
-                ulong checkPos = 32 * 1024;
+                ulong checkPos = 32 * 1024;// 1 << 15;//32 * 1024
                 int open = this.archive.Open(this.archiveStream, ref checkPos, null);
 
                 if (open != 0)
